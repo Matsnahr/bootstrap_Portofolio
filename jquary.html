@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="asset2/js/jquery-3-5-1.full.js"></script>
+    <style>
+        .header{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header"></div>
+
+    <!-- ini button -->
+
+    <button id="show">Tampil Gambar</button>
+    <button id="hide">Sembunyikan Gambar</button>
+
+    <!-- Elemen Gambar -->
+
+    <div id="gambar"></div>
+ 
+<script src="asset2/js/jquery-3.5.1.slim.min.js" ></script>
+<script>
+    $(document).ready(function(){
+        $(".header").html('Bandongan');
+        $(".header").click(function(){
+            $('.header').css({"border":"1px solid blue"});
+        })
+    });
+    // Efek Animasi
+
+    $("#gambar").html("<img id='load-gambar'></img>");
+
+    $("#show").click(function(){
+        $('#load-gambar').attr({'src':'asset2/images/logo_sh.jpg',"width":"200px"});
+    });
+
+    $("#hide").click(function(){
+        $("#load-gambar").fadeOut();
+    });
+
+    $("#hide").click(function(){
+        $("#load-gambar").fadeOut('400');
+    });
+
+</script>
+</body>
+</html>
